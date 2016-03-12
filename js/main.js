@@ -1,5 +1,6 @@
 
 var answers = {
+  // four possible answers, followed by which index is correct, and the message that displays when answered
   1: ["SCIENCE", "TIMETVL", "OUTATIME", "TIME4U", 2, "The custom plate on the deLorean was 'OUTATIME'!"],
   2: ["LONE PINE", "WILD OAK", "BIG FIR", "TWIN PINES", 3, "Marty meets Doc at the Twin Pines mall."],
   3: ["CHICAGO vs MIAMI", "NEW YORK vs LA", "SAN FRANCISCO vs TEXAS", "BALTIMORE vs ATLANTA", 0, "Marty talks with a baseball fan about how Chicago faced Miami in the World Series."],
@@ -13,7 +14,6 @@ var answers = {
 };
 
 var question = 'media/questions/q1.png';
-// var imageCounter = 1;
 var timerImage = 'media/timer/10s.png'
 var timerCountdown = 10;
 var questionCounter = 1;
@@ -113,6 +113,8 @@ var nextMove = function() {
 
 $(document).ready(function() {
 
+
+
   $('.question').on('click', function() {
     swal({
         title: "Hi There!",
@@ -179,4 +181,14 @@ $(document).ready(function() {
     }
   });
 
+  $('p').hover(function() {
+        $(this).stop().animate({ fontSize : '24px', color: 'rgba(0, 0, 0, 1)' });
+  },
+  function() {
+        $(this).stop().animate({ fontSize : '18px',  });
+  });
+
+  $('.mute').on('click', function () {
+    $('.audio').toggle();
+  })
 });

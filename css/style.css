@@ -18,6 +18,7 @@ body {
   top: 110px;
   width: 582px;
   opacity: 1;
+  cursor: pointer;
 }
 
 .game-img {
@@ -48,8 +49,10 @@ body {
   margin-top: 15px;
   border-radius: 10px;
   text-align: center;
-  /*border: 1px solid brown;*/
-  /*box-shadow: 3px 0 14px 1px rgba(0, 0, 0, 0.3);*/
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.72);
+  font-size: 18px;
+
 }
 
 .timer {
@@ -61,7 +64,7 @@ body {
 
 .answer p {
   margin-top: 15px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Special Elite', cursive;
   font-size: 18px;
 }
 
@@ -88,7 +91,14 @@ body {
 }
 
 #leaderboardDiv h1{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Special Elite', cursive;
   font-size: 24px;
   padding: 5px 0 5px 0;
+}
+
+.mute {
+  position: absolute;
+  height: 30px;
+  left: 20px;
+  top: 15px;
 }

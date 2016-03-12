@@ -37,6 +37,8 @@
   <audio src="media/theme.mp3" controls autoplay style="display: none" class="audio"></audio>
 
   <div id='leaderboardDiv'><h1>LEADERBOARD</h1></div>
+
+  <div><img class="mute" src="media/mute.png" alt="mute"></div>
   <script>
   var myDataRef = new Firebase('https://vivid-fire-4284.firebaseio.com/');
     myDataRef.on('child_added', function(snapshot) {
