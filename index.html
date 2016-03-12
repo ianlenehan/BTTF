@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Back To The Future Trivia</title>
+  <script src="js/jquery.js"></script>
+  <script src="js/main.js"></script>
+  <script src="media/sweetalert-master/dist/sweetalert.min.js"></script>
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="media/sweetalert-master/dist/sweetalert.css">
+</head>
+
+<body>
+  <div><img class ="logo" src="media/BTTF_logo.png" alt="logo"></div>
+
+  <div class="container">
+    <div class="img-div"><img class="game-img" src="media/paperbg.png" alt=""></div>
+    <div class="answers">
+      <ul class="answerslist">
+        <li class="answer one" data-index="0"><p id="one"></p></li>
+        <li class="answer two" data-index="1"><p id="two"></p></li>
+        <li class="answer three" data-index="2"><p id="three"></p></li>
+        <li class="answer four" data-index="3"><p id="four"></p></li>
+      </ul>
+    </div>
+
+  </div>
+  <div><img class="headline" src="media/questions/commended.png" alt=""></div>
+  <div><img class="question" src="media/questions/defaultbegin.png" alt=""></div>
+
+  <div><img src="media/timer/10s.png" class="timer" alt="countdown"></div>
+  <div><img src="media/questions/insert.png" class="insert" alt="" /></div>
+
+  <audio src="media/theme.mp3" controls autoplay style="display: none" class="audio"></audio>
+
+  <div id='leaderboardDiv'><h1>LEADERBOARD</h1></div>
+  <script>
+  var myDataRef = new Firebase('https://vivid-fire-4284.firebaseio.com/');
+    myDataRef.on('child_added', function(snapshot) {
+          var leaderboard = snapshot.val();
+          displayLeaderboard(leaderboard.name, leaderboard.points);
+        });
+        function displayLeaderboard(name, points) {
+          $('<div/>').text(points).prepend($('<em/>').text(name+': ')).appendTo($('#leaderboardDiv'));
+          $('#leaderboardDiv')[0].scrollTop = $('#leaderboardDiv')[0].scrollHeight;
+        };
+  </script>
+</body>
+</html>

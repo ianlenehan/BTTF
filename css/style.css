@@ -1,0 +1,94 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
+
+body {
+  background-image: url(../media/delorean.jpg);
+  background-size: cover;
+}
+
+.logo {
+  position: absolute;
+  right: 50px;
+  height: 180px;
+}
+
+.question, .headline {
+  position: absolute;
+  left: 20px;
+  top: 110px;
+  width: 582px;
+  opacity: 1;
+}
+
+.game-img {
+  position: absolute;
+  height: 500px;
+  opacity: 1;
+  left: 10px;
+  top: 10px;
+  box-shadow: 5px 10px 25px 2px rgb(0, 0, 0);
+}
+
+.answers {
+  position: absolute;
+  top: 195px;
+  left: 20px;
+
+}
+
+.answerslist {
+  list-style: none;
+}
+
+.answer {
+  width: 180px;
+  height: 50px;
+  background-color: rgba(244, 243, 230, 0.1);
+  padding: 5px;
+  margin-top: 15px;
+  border-radius: 10px;
+  text-align: center;
+  /*border: 1px solid brown;*/
+  /*box-shadow: 3px 0 14px 1px rgba(0, 0, 0, 0.3);*/
+}
+
+.timer {
+  position: absolute;
+  top: 10px;
+  left: 650px;
+  box-shadow: 5px 10px 25px 2px rgb(0, 0, 0);
+}
+
+.answer p {
+  margin-top: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+
+.insert {
+  position: absolute;
+  top: 204px;
+  left: 217px;
+  width: 390px;
+  opacity: 1;
+}
+
+#leaderboardDiv {
+  box-sizing: border-box;
+  left: 650px;
+  top: 135px;
+  width: 205px;
+  position: absolute;
+  background-color: rgba(62, 62, 62, 0.7);
+  color: rgb(204, 204, 204);
+  padding: 10px;
+  box-shadow: 5px 10px 25px 2px rgb(0, 0, 0);
+  font-family: 'Special Elite', cursive;
+  line-height: 1.5em;
+}
+
+#leaderboardDiv h1{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  padding: 5px 0 5px 0;
+}
